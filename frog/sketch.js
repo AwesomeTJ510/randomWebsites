@@ -8,7 +8,7 @@ let posX = 0
 let posY = 0
 
 let color1 = [66, 135, 245]
-let color2 = [0, 255, 0]
+let color2 = [66, 245, 75]
 
 let fullscreenChange = false;
 
