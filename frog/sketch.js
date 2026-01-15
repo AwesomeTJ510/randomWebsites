@@ -17,13 +17,7 @@ function setup() {
 }
 
 function draw() {
-  if (fullscreenChange == 0) {
-    if (fullscreen()) {
-      resizeCanvas(windowWidth, windowHeight)
-    } else {
-      resizeCanvas(600, 600)
-    }
-  }
+  resizeCanvas(windowWidth, windowHeight)
   
   strokeWeight(0)
   
@@ -37,8 +31,8 @@ function draw() {
     targetY = mouseY - (height / 2)
   }
   
-  posX += (targetX - posX) / 10
-  posY += (targetY - posY) / 10
+  posX += (targetX - posX) / 7
+  posY += (targetY - posY) / 7
   
   for (let i = 0; i < circleCount; i++) {
     fill(color2[0] + (((color1[0] - color2[0]) / circleCount) * i), color2[1] + (((color1[1] - color2[1]) / circleCount) * i), color2[2] + (((color1[2] - color2[2]) / circleCount) * i))
