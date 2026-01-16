@@ -19,6 +19,9 @@ function setup() {
 function draw() {
   resizeCanvas(windowWidth, windowHeight)
   
+  color1 = rainbow(color1, 6)
+  color2 = rainbow(color2, 6)
+  
   strokeWeight(0)
   
   background(0);
@@ -52,4 +55,45 @@ function keyPressed() {
     }
     fullscreenChange = 2
   }
+}
+
+function rainbow(colorList, changeAmount) {
+  if ((colorList[2] > 0) && (colorList[0] == 255)) {
+    colorList[2] -= changeAmount
+    if (colorList[2] < 0) {
+      colorList[2] = 0
+    }
+  } 
+  if ((colorList[0] < 255) && (colorList[1] == 0)) {
+    colorList[0] += changeAmount
+    if (colorList[0] > 255) {
+      colorList[0] = 255
+    }
+  } 
+  if ((colorList[0] > 0) && (colorList[1] == 255)) {
+    colorList[0] -= changeAmount
+    if (colorList[0] < 0) {
+      colorList[0] = 0
+    }
+  } 
+  if ((colorList[1] < 255) && (colorList[2] == 0)) {
+    colorList[1] += changeAmount
+    if (colorList[1] > 255) {
+      colorList[1] = 255
+    }
+  } 
+  if ((colorList[1] > 0) && (colorList[2] == 255)) {
+    colorList[1] -= changeAmount
+    if (colorList[1] < 0) {
+      colorList[1] = 0
+    }
+  } 
+  if ((colorList[2] < 255) && (colorList[0] == 0)) {
+    colorList[2] += changeAmount
+    if (colorList[2] > 255) {
+      colorList[2] = 255
+    }
+  }
+  
+  return colorList;
 }
