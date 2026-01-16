@@ -7,8 +7,8 @@ let targetY = 0
 let posX = 0
 let posY = 0
 
-let color1 = [255, 0, 0]
-let color2 = [0, 255, 0]
+let color1 = [66, 135, 245]
+let color2 = [66, 245, 75]
 
 let fullscreenChange = false;
 
@@ -19,8 +19,8 @@ function setup() {
 function draw() {
   resizeCanvas(windowWidth, windowHeight)
   
-  color1 = rainbow(color1, 6)
-  color2 = rainbow(color2, 6)
+  color1 = rainbow(color1, 5)
+  color2 = rainbow(color2, 5)
   
   strokeWeight(0)
   
